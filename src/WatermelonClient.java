@@ -44,7 +44,6 @@ public class WatermelonClient extends Socket implements Runnable
 			//writer = new PrintWriter(this.getOutputStream());
 
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		while(this.shouldRead)
@@ -53,7 +52,6 @@ public class WatermelonClient extends Socket implements Runnable
 			try {
 				message = this.reader.readLine();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			if(message != null)
@@ -64,7 +62,6 @@ public class WatermelonClient extends Socket implements Runnable
 		try {
 			this.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}	
