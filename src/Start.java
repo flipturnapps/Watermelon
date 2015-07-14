@@ -1,7 +1,6 @@
 import java.io.IOException;
 
 public class Start {
-
 	public static void main(String[] args) throws NumberFormatException, IOException
 	{
 		if(args.length > 0)
@@ -13,7 +12,5 @@ public class Start {
 			WatermelonMultiServer mServer = new WatermelonMultiServer();
 			WatermelonSingleServer sServer = new WatermelonSingleServer(mServer);
 		}
-
 	}
-
 }
