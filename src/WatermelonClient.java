@@ -27,9 +27,8 @@ public class WatermelonClient extends Socket implements Runnable
 		{
 			try
 			{
-				Socket socket = new Socket(ip,WatermelonSingleServer.PORT);
-				Socket lSocket = new Socket("localhost",fowardPort);
-				pairs.add(new BridgePairPair(socket,lSocket));
+				pairs.add(new BridgePairPair(new Socket(ip,WatermelonSingleServer.PORT),
+				                             new Socket("localhost",fowardPort)));
 			}
 			catch(IOException ex)
 			{
