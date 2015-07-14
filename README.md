@@ -13,4 +13,4 @@ This should be able to eliminate IP address sharing in favor of username sharing
              ||        //   \\        ||
              ||   client -> server    ||
              ||             ^  ^      ||
-			 client -------^    ^-client
+             client -------^    ^-client
