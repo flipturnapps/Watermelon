@@ -24,7 +24,6 @@ public class WatermelonMultiServer extends ServerSocket implements Runnable
 			try {
 				socket = this.accept();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			if(socket != null)

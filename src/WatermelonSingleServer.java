@@ -26,7 +26,6 @@ public class WatermelonSingleServer extends ServerSocket implements Runnable
 			this.mainSocket = this.accept();
 			this.writer = new PrintWriter(mainSocket.getOutputStream());
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		while(this.accept)
@@ -35,7 +34,6 @@ public class WatermelonSingleServer extends ServerSocket implements Runnable
 			try {
 				socket = this.accept();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			int size = pairs.size();
