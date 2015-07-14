@@ -36,9 +36,7 @@ public class WatermelonSingleServer extends ServerSocket implements Runnable
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			int size = pairs.size();
-			BridgePairPair pair = new BridgePairPair(socket,mServer.getSockets().get(size));
-			pairs.add(pair);
+			pairs.add(new BridgePairPair(socket, this.mServer.getSockets().get(this.pairs.size())));
 		}	
 	}
 	public void tellMakeNew() 
