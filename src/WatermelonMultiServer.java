@@ -12,13 +12,13 @@ public class WatermelonMultiServer extends ServerSocket implements Runnable
 	public WatermelonMultiServer() throws IOException 
 	{
 		super(PORT);
-		accept = true;
+		this.accept = true;
 		new Thread(this).run();
 	}
 	@Override
 	public void run() 
 	{
-		while(accept)
+		while(this.accept)
 		{
 			Socket socket = null;
 			try {
@@ -29,8 +29,8 @@ public class WatermelonMultiServer extends ServerSocket implements Runnable
 			}
 			if(socket != null)
 			{
-				sockets.add(socket);
-				wss.tellMakeNew();
+				this.sockets.add(socket);
+				this.wss.tellMakeNew();
 			}
 		}
 	}
@@ -46,7 +46,4 @@ public class WatermelonMultiServer extends ServerSocket implements Runnable
 	public void setWss(WatermelonSingleServer wss) {
 		this.wss = wss;
 	}
-
-	
-
 }

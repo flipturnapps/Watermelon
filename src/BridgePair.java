@@ -13,7 +13,7 @@ public class BridgePair implements Runnable
 		super();
 		this.inStream = inStream;
 		this.outStream = outStream;
-		open = true;
+		this.open = true;
 		new Thread(this).start();
 	}
 	@Override
@@ -21,13 +21,13 @@ public class BridgePair implements Runnable
 	{
 		byte[] buffer = new byte[BUFFER_SIZE];
 		int read;
-		while(open)
+		while(this.open)
 		{
 			try
 			{
-				read = inStream.read(buffer);
+				read = this.inStream.read(buffer);
 				if(read != -1)
-					outStream.write(buffer, 0, read);
+					this.outStream.write(buffer, 0, read);
 			}
 			catch(Exception ex)
 			{
@@ -35,8 +35,8 @@ public class BridgePair implements Runnable
 			}
 		}
 		try {
-			inStream.close();
-			outStream.close();
+			this.inStream.close();
+			this.outStream.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

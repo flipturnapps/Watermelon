@@ -16,7 +16,7 @@ public class WatermelonClient extends Socket implements Runnable
 	{
 		super(ip,  WatermelonSingleServer.PORT);
 		this.ip = ip;
-		shouldRead = true;
+		this.shouldRead = true;
 		this.fowardPort = fowardPort;
 		new Thread(this).start();
 	}
@@ -41,25 +41,25 @@ public class WatermelonClient extends Socket implements Runnable
 	public void run() 
 	{
 		try {
-			reader = new BufferedReader(new InputStreamReader(this.getInputStream()));
+			this.reader = new BufferedReader(new InputStreamReader(this.getInputStream()));
 			//writer = new PrintWriter(this.getOutputStream());
 
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		while(shouldRead)
+		while(this.shouldRead)
 		{
 			String message = null;
 			try {
-				message = reader.readLine();
+				message = this.reader.readLine();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			if(message != null)
 			{
-				readMessage(message);
+				this.readMessage(message);
 			}
 		}		
 		try {
