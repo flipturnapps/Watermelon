@@ -11,7 +11,8 @@ public class WatermelonSingleServer extends ServerSocket implements Runnable
 	private ArrayList<BridgePairPair> pairs = new ArrayList<BridgePairPair>();
 	private WatermelonMultiServer mServer;
 	private Socket mainSocket;
-	private PrintWriter writer;	
+	private PrintWriter writer;
+
 	public WatermelonSingleServer(WatermelonMultiServer mServer) throws IOException 
 	{
 		super(PORT);
