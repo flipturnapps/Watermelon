@@ -33,16 +33,16 @@ public class WatermelonMultiServer extends ServerSocket implements Runnable
 			}
 		}
 	}
-	public ArrayList<Socket> getSockets() {
+	public ArrayList<Socket>      getSockets() {
 		return sockets;
 	}
-	public void setSockets(ArrayList<Socket> sockets) {
+	public void                   setSockets(ArrayList<Socket> sockets) {
 		this.sockets = sockets;
 	}
 	public WatermelonSingleServer getWss() {
 		return wss;
 	}
-	public void setWss(WatermelonSingleServer wss) {
+	public void                   setWss(WatermelonSingleServer wss) {
 		this.wss = wss;
 	}
 }
