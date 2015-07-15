@@ -42,7 +42,4 @@ public class BridgePair implements Runnable
 			e.printStackTrace();
 		}
 	}
-
-
-
 }

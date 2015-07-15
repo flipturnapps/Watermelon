@@ -47,7 +47,4 @@ public class WatermelonSingleServer extends ServerSocket implements Runnable
 			this.writer.flush();
 		}
 	}
-
-	
-
 }

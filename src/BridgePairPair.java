@@ -36,12 +36,7 @@ public class BridgePairPair
 	public Socket getS1() {
 		return s1;
 	}
-
 	public Socket getS2() {
 		return s2;
 	}
-
-
-
-
 }
