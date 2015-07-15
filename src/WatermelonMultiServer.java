@@ -9,7 +9,7 @@ public class WatermelonMultiServer extends ServerSocket implements Runnable
 	private boolean accept;
 	private ArrayList<Socket> sockets = new ArrayList<Socket>();
 	private WatermelonSingleServer wss;
-	public WatermelonMultiServer() throws IOException 
+	public WatermelonMultiServer() throws IOException
 	{
 		super(PORT);
 		this.accept = true;
