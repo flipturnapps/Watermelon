@@ -38,7 +38,6 @@ public class BridgePair implements Runnable
 			this.inStream.close();
 			this.outStream.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
