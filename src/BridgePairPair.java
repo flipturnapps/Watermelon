@@ -24,19 +24,19 @@ public class BridgePairPair
 	public BridgePair getPair1() {
 		return pair1;
 	}
-	public void setPair1(BridgePair pair1) {
+	public void       setPair1(BridgePair pair1) {
 		this.pair1 = pair1;
 	}
 	public BridgePair getPair2() {
 		return pair2;
 	}
-	public void setPair2(BridgePair pair2) {
+	public void       setPair2(BridgePair pair2) {
 		this.pair2 = pair2;
 	}
-	public Socket getS1() {
+	public Socket     getS1() {
 		return s1;
 	}
-	public Socket getS2() {
+	public Socket     getS2() {
 		return s2;
 	}
 }
