@@ -23,32 +23,28 @@ public class WatermelonSingleServer extends ServerSocket implements Runnable
 	public void run() 
 	{
 		try {
-			mainSocket = this.accept();
-			writer = new PrintWriter(mainSocket.getOutputStream());
+			this.mainSocket = this.accept();
+			this.writer = new PrintWriter(mainSocket.getOutputStream());
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		while(accept)
+		while(this.accept)
 		{
 			Socket socket = null;
 			try {
 				socket = this.accept();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			int size = pairs.size();
-			BridgePairPair pair = new BridgePairPair(socket,mServer.getSockets().get(size));
-			pairs.add(pair);
+			pairs.add(new BridgePairPair(socket, this.mServer.getSockets().get(this.pairs.size())));
 		}	
 	}
 	public void tellMakeNew() 
 	{
-		if(writer != null)
+		if(this.writer != null)
 		{
-			writer.println("add");
-			writer.flush();
+			this.writer.println("add");
+			this.writer.flush();
 		}
 	}
 
