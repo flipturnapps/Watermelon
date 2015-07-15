@@ -7,9 +7,9 @@ Clients can connect to the dedicated WatermelonServer for their traffic to be ro
 
                   Watermelon server
                          |||
-             ____________|||____________
-             -----------// \\-----------
+                         |||
+              <<<<<<<<<<// \\>>>>>>>>>>
              ||        //   \\        ||
-             ||   client -> server    ||
+             ||   client >> server    ||
              ||             ^  ^      ||
-             client -------^    ^-client
+             client >>>>>>>^    ^< client
